@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import { Zap } from "lucide-react";
+import { Banknote, LogOut, Zap } from "lucide-react";
+import { auth } from "@/auth";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
@@ -14,11 +15,13 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
+
   return (
     <html lang="en" data-theme="surveyspark" className="scroll-smooth">
       <body className={poppins.className}>
@@ -27,11 +30,36 @@ export default function RootLayout({
             <img src="/logo.svg" alt="SurveySpark" className="h-8 w-8" />
             SurveySpark
           </Link>
-          <div className="navbar-end">
-            <button className="btn btn-primary">
-              <Zap />
-              Get SurveySpark
-            </button>
+          <div className="navbar-end gap-4">
+            {session?.user ? 
+              <>
+                <p className="flex gap-1 items-center text-lg text-primary font-bold">
+                  <Banknote />
+                  50 Credits
+                </p>
+                <div className="dropdown dropdown-end">
+                  <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                      <img alt="Tailwind CSS Navbar component" src={session.user.image ?? ""} />
+                    </div>
+                  </div>
+                  <ul tabIndex={0} className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li>
+                      <Link href={"/api/auth/signout"} className="btn btn-primary">
+                        <LogOut />
+                        Logout
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </> : 
+              <>
+                <Link href={"/api/auth/signin"} className="btn btn-primary">
+                  <Zap />
+                  Get SurveySpark
+                </Link>
+              </>
+            }
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-8">

@@ -1,7 +1,10 @@
+import { auth } from "@/auth";
 import { Banknote, Check, Gift, Zap } from "lucide-react";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+
   return (
     <main> 
       <div className="hero min-h-screen">
@@ -10,7 +13,8 @@ export default function Home() {
             <div className="mockup-browser-toolbar">
               <div className="input border border-base-300">https://surveyspark.com</div>
             </div>
-            <div className="flex justify-center px-4 py-32 border-t border-base-300">Hello!</div>
+            <div className="flex justify-center px-4 py-32 border-t border-base-300">
+            </div>
           </div>
           <div className="flex flex-col gap-4 flex-1">
             <h1 className="text-5xl font-bold">Let your ideas spark the perfect survey</h1>
@@ -29,20 +33,20 @@ export default function Home() {
                 <span>Open source</span>
               </div>
             </div>
-            <button className="btn btn-primary w-fit px-8">
+            <Link href={session?.user ? "/#pricing" : "/api/auth/signin"} className="btn btn-primary w-fit px-8">
               <Zap />
               Get SurveySpark
-            </button>
+            </Link>
             <div className="flex items-center gap-2">
               <Gift className="font-black text-primary" />
               <p>
-                <span className="font-black text-primary">$10</span> off for the first 100 customers (100 left)
+                <span className="font-black text-primary">50%</span> off all packages for the first 100 customers!
               </p>
             </div>
           </div>
         </div>
       </div>
-      <section className="min-h-screen py-16 flex flex-col items-center gap-8" id="pricing">
+      <section className="min-h-screen py-16 flex flex-col items-center gap-8 justify-center" id="pricing">
         <h1 className="text-primary font-bold text-lg">Pricing</h1>
         <h2 className="text-5xl font-bold text-center max-w-[800px]">Save hours and get responses coming in minutes!</h2>
         <div className="flex items-center md:gap-8 mt-8 md:flex-row flex-col gap-16">
@@ -86,7 +90,7 @@ export default function Home() {
           </div>
           <div className="card w-96 bg-base-100 border indicator shadow-md">
             <div className="indicator-item text-2xl font-bold bg-primary rounded-box text-primary-content indicator-top indicator-center w-fit px-4 py-2 flex items-center gap-2">
-              <span className="text-lg line-through opacity-50">$34.99</span>
+              <span className="text-lg line-through opacity-50">$29.99</span>
               $14.99
             </div> 
             <div className="card-body gap-4 py-16">
