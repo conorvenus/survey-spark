@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import { Banknote, LogOut, Zap } from "lucide-react";
 import { auth } from "@/auth";
+import { PrismaClient } from "@prisma/client";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
@@ -21,6 +22,19 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const session = await auth();
+  let user;
+
+  if (session?.user) {
+    const prisma = new PrismaClient();
+    user = await prisma.user.findUnique({
+      where: {
+        id: session?.user?.id,
+      },
+      select: {
+        credits: true,
+      },
+    });
+  }
 
   return (
     <html lang="en" data-theme="surveyspark" className="scroll-smooth">
@@ -35,7 +49,7 @@ export default async function RootLayout({
               <>
                 <p className="flex gap-1 items-center text-lg text-primary font-bold">
                   <Banknote />
-                  50 Credits
+                  {user?.credits} Credits
                 </p>
                 <div className="dropdown dropdown-end">
                   <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
