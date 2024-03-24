@@ -1,113 +1,127 @@
-import Image from "next/image";
+import { Banknote, Check, Gift, Zap } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main> 
+      <div className="hero min-h-screen">
+        <div className="hero-content flex-col lg:flex-row-reverse gap-16 items-center justify-center">
+          <div className="mockup-browser border border-base-300 flex-1">
+            <div className="mockup-browser-toolbar">
+              <div className="input border border-base-300">https://surveyspark.com</div>
+            </div>
+            <div className="flex justify-center px-4 py-32 border-t border-base-300">Hello!</div>
+          </div>
+          <div className="flex flex-col gap-4 flex-1">
+            <h1 className="text-5xl font-bold">Let your ideas spark the perfect survey</h1>
+            <p className="leading-6 text-lg">The AI powered survey generator with everything you need to get responses in minutes, <span className="relative text-secondary-content font-bold px-2 py-0.5">not hours.<span className="absolute bg-secondary rounded-md w-full h-full left-0 top-0 -z-10 -rotate-2"></span></span></p>
+            <div className="flex flex-col my-4">
+              <div className="flex gap-4 items-center">
+                <Check className="text-primary" />
+                <span>Easy to use</span>
+              </div>
+              <div className="flex gap-4 items-center">
+                <Check className="text-primary" />
+                <span>Fast to ship</span>
+              </div>
+              <div className="flex gap-4 items-center">
+                <Check className="text-primary" />
+                <span>Open source</span>
+              </div>
+            </div>
+            <button className="btn btn-primary w-fit px-8">
+              <Zap />
+              Get SurveySpark
+            </button>
+            <div className="flex items-center gap-2">
+              <Gift className="font-black text-primary" />
+              <p>
+                <span className="font-black text-primary">$10</span> off for the first 100 customers (100 left)
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className="min-h-screen py-16 flex flex-col items-center gap-8" id="pricing">
+        <h1 className="text-primary font-bold text-lg">Pricing</h1>
+        <h2 className="text-5xl font-bold text-center max-w-[800px]">Save hours and get responses coming in minutes!</h2>
+        <div className="flex items-center md:gap-8 mt-8 md:flex-row flex-col gap-16">
+          <div className="card w-96 bg-base-100 border indicator shadow-md">
+            <div className="indicator-item text-2xl font-bold bg-primary rounded-box text-primary-content indicator-top indicator-center w-fit px-4 py-2 flex items-center gap-2">
+              <span className="text-lg line-through opacity-50">$9.99</span>
+              $4.99
+            </div> 
+            <div className="card-body gap-4 py-16">
+              <h2 className="card-title text-2xl font-bold border-b mb-2">Basic</h2>
+              <div className="flex gap-2 items-center text-2xl text-primary font-bold">
+                <Banknote className="w-8 h-8" />
+                <span>50 Credits</span>
+              </div>
+              <div className="card-actions">
+                <button className="btn btn-primary w-full">
+                  <Zap />
+                  Get SurveySpark
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card w-96 bg-base-100 border indicator shadow-md">
+            <div className="indicator-item text-2xl font-bold bg-primary rounded-box text-primary-content indicator-top indicator-center w-fit px-4 py-2 flex items-center gap-2">
+              <span className="text-lg line-through opacity-50">$19.99</span>
+              $9.99
+            </div> 
+            <div className="card-body gap-4 py-16">
+              <h2 className="card-title text-2xl font-bold border-b mb-2">Deluxe</h2>
+              <div className="flex gap-2 items-center text-2xl text-primary font-bold">
+                <Banknote className="w-8 h-8" />
+                <span>150 Credits</span>
+              </div>
+              <div className="card-actions">
+                <button className="btn btn-primary w-full">
+                  <Zap />
+                  Get SurveySpark
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card w-96 bg-base-100 border indicator shadow-md">
+            <div className="indicator-item text-2xl font-bold bg-primary rounded-box text-primary-content indicator-top indicator-center w-fit px-4 py-2 flex items-center gap-2">
+              <span className="text-lg line-through opacity-50">$34.99</span>
+              $14.99
+            </div> 
+            <div className="card-body gap-4 py-16">
+              <h2 className="card-title text-2xl font-bold border-b mb-2">Ultimate</h2>
+              <div className="flex gap-2 items-center text-2xl text-primary font-bold">
+                <Banknote className="w-8 h-8" />
+                <span>250 Credits</span>
+              </div>
+              <div className="card-actions">
+                <button className="btn btn-primary w-full">
+                  <Zap />
+                  Get SurveySpark
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr className="absolute w-full left-0" />
+      <footer className="footer p-10 text-base-content items-center">
+        <aside className="items-center grid-flow-col">
+          <Zap className="text-primary" />
+          <p><span className="font-bold text-primary">Survey Spark</span><br/>Let your ideas spark the perfect survey!</p>
+        </aside> 
+        <nav>
+          <h6 className="footer-title">Links</h6> 
+          <Link href={"/#pricing"} className="link link-hover">Pricing</Link>
+          <a className="link link-hover">Support </a>
+        </nav> 
+        <nav>
+          <h6 className="footer-title">Legal</h6> 
+          <a className="link link-hover">Terms of Use</a>
+          <a className="link link-hover">Privacy Policy</a>
+        </nav> 
+      </footer> 
     </main>
   );
 }

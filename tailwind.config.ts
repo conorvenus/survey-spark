@@ -7,14 +7,21 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        surveyspark: {
+          primary: "#bf25ff",
+          secondary: "#058ED9",
+          "primary-content": "#ffffff",
+          "secondary-content": "#ffffff",
+          "base-100": "#F9F9F9",
+        }
+      }
+    ]
+  },
+  plugins: [require('daisyui')],
 };
 export default config;
