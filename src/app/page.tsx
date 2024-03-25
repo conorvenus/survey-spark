@@ -51,7 +51,7 @@ export default async function Home() {
       <section className="min-h-screen py-16 flex flex-col items-center gap-8 justify-center" id="pricing">
         <h1 className="text-primary font-bold text-lg">Pricing</h1>
         <h2 className="text-5xl font-bold text-center max-w-[800px]">Save hours and get responses coming in minutes!</h2>
-        <div className="flex items-center md:gap-8 mt-8 md:flex-row flex-col gap-16">
+        <div className="flex items-center xl:gap-8 mt-8 xl:flex-row flex-col gap-16">
           <div className="card w-96 bg-base-100 border indicator shadow-md">
             <div className="indicator-item text-2xl font-bold bg-primary rounded-box text-primary-content indicator-top indicator-center w-fit px-4 py-2 flex items-center gap-2">
               <span className="text-lg line-through opacity-50">$9.99</span>
