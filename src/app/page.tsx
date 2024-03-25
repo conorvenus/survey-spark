@@ -1,6 +1,8 @@
 import { auth } from "@/auth";
 import { Banknote, Check, Gift, Zap } from "lucide-react";
 import Link from "next/link";
+import { checkout } from "./actions";
+import CheckoutButton from "./components/CheckoutButton";
 
 export default async function Home() {
   const session = await auth();
@@ -62,10 +64,7 @@ export default async function Home() {
                 <span>50 Credits</span>
               </div>
               <div className="card-actions">
-                <button className="btn btn-primary w-full">
-                  <Zap />
-                  Get SurveySpark
-                </button>
+                <CheckoutButton credits={50} />
               </div>
             </div>
           </div>
