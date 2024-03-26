@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+//TODO: Fix non centered 404 page
 export default function NotFound() {
     return (
     <section className="h-[80vh] flex flex-col items-center justify-center">
