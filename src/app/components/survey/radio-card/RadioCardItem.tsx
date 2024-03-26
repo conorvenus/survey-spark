@@ -13,7 +13,7 @@ const CheckCardItem = ({ text, name }: CheckCardItemProps) => {
             radio-primary
             w-6 h-6
             " />
-            <span className="label-text">{text}</span> 
+            {text}
         </label>
     );
 }

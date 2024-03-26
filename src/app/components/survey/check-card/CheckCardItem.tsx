@@ -11,7 +11,7 @@ const CheckCardItem = ({ text }: CheckCardItemProps) => {
             checkbox 
             checkbox-primary
             " />
-            <span className="label-text">{text}</span> 
+            {text}
         </label>
     );
 }
