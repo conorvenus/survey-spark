@@ -13,7 +13,8 @@ const CheckCardItem = ({ text, name }: CheckCardItemProps) => {
             w-6 h-6
             rounded-full
             relative
-            border-2 border-primary
+            border-2 border-gray-300
+            checked:border-primary
             before:bg-primary
             before:w-3 
             before:h-3
