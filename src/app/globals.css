@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .gradient-button {
-    @apply border-none px-6 py-4 text-primary-content shadow-xl font-bold text-base gap-4;
+    @apply border-none px-[2.6px] py-0.5 text-primary-content font-bold text-base gap-4;
     background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
     animation: gradient-animation 15s linear infinite;
     background-size: 600%;
