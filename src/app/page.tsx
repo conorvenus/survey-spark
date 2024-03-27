@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <main> 
-      <div className="hero min-h-screen">
+      <div className="hero h-[80vh]">
         <div className="hero-content flex-col lg:flex-row-reverse gap-16 items-center justify-center">
           <div className="mockup-browser border border-base-300 flex-1">
             <div className="mockup-browser-toolbar">
