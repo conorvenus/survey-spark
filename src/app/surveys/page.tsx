@@ -1,44 +1,30 @@
-import RadioCard from "../components/survey/radio-card/RadioCard"
-import CheckCard from "../components/survey/check-card/CheckCard"
-import LongTextCard from "../components/survey/text-card/LongTextCard"
-import ShortTextCard from "../components/survey/text-card/ShortTextCard"
+"use client"
 import GenerateButton from "../components/GenerateButton"
-import RatingCard from "../components/survey/rating-card/RatingCard"
+import React from 'react'
+import {useState} from 'react'
 
-export default async function Surveys() {
+
+export default function Surveys() {
+
+    const [char, setChar] = useState(0);
+
+    const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setChar(e.target.value.length);
+    }
+
     return (
-        <div className="flex flex-col gap-4 py-16">
-            <div className="shadow-xl p-12 rounded-box flex flex-col gap-4">
-                <div className="gradient-button w-fit">Create a survey that...</div>
-                <textarea className="bg-primary-content shadow-md rounded-box p-4 w-full h-48 resize-none" placeholder="Enter your survey description here..."></textarea>
+        <section className="flex flex-col gap-4 py-16">
+            <div className="shadow-xl p-12 rounded-box flex flex-col gap-8">
+                <h1 className="text-4xl font-bold  self-center">🎉 Enter a prompt to generate your survey!</h1>
+                <div className="join rounded-box h-40 relative shadow-md">
+                    <p className="join-item gradient-button  min-w-fit">Generate a survey for a...</p>
+                    <div className="join-item bg-primary-content p-0 w-full relative overflow-hidden">
+                        <textarea maxLength={250} onChange={onChange} className="focus:outline-none join-item bg-primary-content p-4 w-full h-full resize-none" placeholder="Creative Weather App..." />
+                        <p className={`absolute right-3 bottom-3 text-sm  ${char >= 250 ? "text-red-500" : "text-gray-400"}`}>{char}/250</p>
+                    </div>
+                </div>
                 <GenerateButton />
             </div>
-            <RadioCard 
-            question={"If you were to pick 4 features within SurveySpark, what would they be and why? Please explain in detail and select using the boxes below."}
-            entries={[
-                "Field 1",
-                "Field 2",
-                "Field 3",
-                "Field 4"]}/>
-            <CheckCard 
-            question="What are your favorite colors?"
-            entries={[
-                "Field 1",
-                "Field 2",
-                "Field 3",
-                "Field 4"]}/>
-            <LongTextCard 
-            question="Here's a question"/>
-            <LongTextCard 
-            question="Here's another question"/>
-            <ShortTextCard
-            question="Here's a question requiring a short response" />
-            <RatingCard
-            question="Rate this survey"
-            stars={5} />
-            <RatingCard 
-            question="Rate this survey again"
-            stars={10} />
-        </div>
+        </section>
     )
 }
