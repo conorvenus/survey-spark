@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-button {
+    @apply btn btn-primary border-none py-2 shadow-xl h-fit font-bold text-base gap-4;
+    background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+    animation: gradient-animation 15s linear infinite;
+    background-size: 600%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.gradient-button:hover {
+    @apply from-blue-600 via-indigo-600 to-purple-600;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
