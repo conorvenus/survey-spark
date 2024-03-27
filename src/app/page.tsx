@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import { Banknote, Check, Gift, Zap } from "lucide-react";
 import Link from "next/link";
-import { checkout } from "./actions";
+import AvatarGroup from "./components/reviews/AvatarGroup";
 import CheckoutButton from "./components/CheckoutButton";
 import FAQ from "./components/faq/FAQ";
 
@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
 
-    <main> 
+    <main>
       <div className="hero h-[80vh]">
         <div className="hero-content flex-col lg:flex-row-reverse gap-16 items-center justify-center">
           <div className="mockup-browser border border-base-300 flex-1">
@@ -44,9 +44,12 @@ export default async function Home() {
             <div className="flex items-center gap-2">
               <Gift className="font-black text-primary" />
               <p>
-                <span className="font-black text-primary">50%</span> off all packages for the first 100 customers!
+                <span className="font-bold text-primary">50%</span> off all packages for the first 100 customers!
               </p>
             </div>
+            
+              <AvatarGroup />
+            
           </div>
         </div>
       </div>
@@ -130,4 +133,6 @@ export default async function Home() {
       </footer>
     </main>
   );
+
+
 }
