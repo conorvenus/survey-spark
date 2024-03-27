@@ -130,5 +130,3 @@ export default async function Home() {
     </main>
   );
 }
-
-https://trello.com/b/E0Ula01I/surveyspark
