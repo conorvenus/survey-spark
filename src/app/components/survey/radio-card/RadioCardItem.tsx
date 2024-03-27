@@ -1,15 +1,20 @@
 import React from 'react';
 
 interface CheckCardItemProps {
+    name: string;
     text: string;
 }
 
-const CheckCardItem = ({ text }: CheckCardItemProps) => {
+const CheckCardItem = ({ text, name }: CheckCardItemProps) => {
     return (
-        <div className="flex items-center gap-4 font-medium">
-            <div className="bg-primary-content border-2 border-black h-4 w-4 rounded-full"></div>
+        <label className="flex items-center gap-4 font-medium cursor-pointer">
+            <input type="radio" name={name} className="
+            radio
+            radio-primary
+            w-6 h-6
+            " />
             {text}
-        </div>
+        </label>
     );
 }
 
