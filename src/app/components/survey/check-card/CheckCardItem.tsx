@@ -1,5 +1,3 @@
-import React from 'react';
-import { Check } from "lucide-react";
 
 interface CheckCardItemProps {
     text: string;
@@ -7,10 +5,14 @@ interface CheckCardItemProps {
 
 const CheckCardItem = ({ text }: CheckCardItemProps) => {
     return (
-        <div className="flex items-center gap-4 font-medium">
-            <Check className="border-black border-2 h-4 w-4" />
+        <label className="flex items-center gap-4 font-medium cursor-pointer">
+            <input type="checkbox" name="text.replace(/\s+/g, '').toLowerCase()" className="
+            w-6 h-6
+            checkbox 
+            checkbox-primary
+            " />
             {text}
-        </div>
+        </label>
     );
 }
 
