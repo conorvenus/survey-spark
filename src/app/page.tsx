@@ -3,11 +3,13 @@ import { Banknote, Check, Gift, Zap } from "lucide-react";
 import Link from "next/link";
 import { checkout } from "./actions";
 import CheckoutButton from "./components/CheckoutButton";
+import FAQ from "./components/faq/FAQ";
 
 export default async function Home() {
   const session = await auth();
 
   return (
+
     <main> 
       <div className="hero h-[80vh]">
         <div className="hero-content flex-col lg:flex-row-reverse gap-16 items-center justify-center">
@@ -56,7 +58,7 @@ export default async function Home() {
             <div className="indicator-item text-2xl font-bold bg-primary rounded-box text-primary-content indicator-top indicator-center w-fit px-4 py-2 flex items-center gap-2">
               <span className="text-lg line-through opacity-50">$9.99</span>
               $4.99
-            </div> 
+            </div>
             <div className="card-body gap-4 py-16">
               <h2 className="card-title text-2xl font-bold border-b mb-2">Basic</h2>
               <div className="flex gap-2 items-center text-2xl text-primary font-bold">
@@ -72,7 +74,7 @@ export default async function Home() {
             <div className="indicator-item text-2xl font-bold bg-primary rounded-box text-primary-content indicator-top indicator-center w-fit px-4 py-2 flex items-center gap-2">
               <span className="text-lg line-through opacity-50">$19.99</span>
               $9.99
-            </div> 
+            </div>
             <div className="card-body gap-4 py-16">
               <h2 className="card-title text-2xl font-bold border-b mb-2">Deluxe</h2>
               <div className="flex gap-2 items-center text-2xl text-primary font-bold">
@@ -91,7 +93,7 @@ export default async function Home() {
             <div className="indicator-item text-2xl font-bold bg-primary rounded-box text-primary-content indicator-top indicator-center w-fit px-4 py-2 flex items-center gap-2">
               <span className="text-lg line-through opacity-50">$29.99</span>
               $14.99
-            </div> 
+            </div>
             <div className="card-body gap-4 py-16">
               <h2 className="card-title text-2xl font-bold border-b mb-2">Ultimate</h2>
               <div className="flex gap-2 items-center text-2xl text-primary font-bold">
@@ -108,23 +110,24 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      <FAQ />
       <hr className="absolute w-full left-0" />
       <footer className="footer p-10 text-base-content items-center">
         <aside className="items-center grid-flow-col">
           <Zap className="text-primary" />
-          <p><span className="font-bold text-primary">Survey Spark</span><br/>Let your ideas spark the perfect survey!</p>
-        </aside> 
+          <p><span className="font-bold text-primary">Survey Spark</span><br />Let your ideas spark the perfect survey!</p>
+        </aside>
         <nav>
-          <h6 className="footer-title">Links</h6> 
+          <h6 className="footer-title">Links</h6>
           <Link href={"/#pricing"} className="link link-hover">Pricing</Link>
           <a className="link link-hover">Support </a>
-        </nav> 
+        </nav>
         <nav>
-          <h6 className="footer-title">Legal</h6> 
+          <h6 className="footer-title">Legal</h6>
           <a className="link link-hover">Terms of Use</a>
           <a className="link link-hover">Privacy Policy</a>
-        </nav> 
-      </footer> 
+        </nav>
+      </footer>
     </main>
   );
 }
