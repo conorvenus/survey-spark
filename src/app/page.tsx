@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import { Banknote, Check, Gift, Zap } from "lucide-react";
+import { Banknote, Check, Gift, Zap, Sparkles } from "lucide-react";
 import Link from "next/link";
 import AvatarGroup from "./components/reviews/AvatarGroup";
 import CheckoutButton from "./components/CheckoutButton";
@@ -15,7 +15,9 @@ export default async function Home() {
         <div className="hero-content flex-col lg:flex-row-reverse gap-16 items-center justify-center">
           <div className="mockup-browser border border-base-300 flex-1">
             <div className="mockup-browser-toolbar">
-              <div className="input border border-base-300">https://surveyspark.com</div>
+              <div className="input border border-base-300">
+                <p className="text-sm text-base-content pt-1">https://surveyspark.com</p>
+                </div>
             </div>
             <div className="flex justify-center px-4 py-32 border-t border-base-300">
             </div>
@@ -54,8 +56,9 @@ export default async function Home() {
         </div>
       </div>
 
-      <section className="py-16 flex flex-col items-center gap-12 justify-center">
-        <h2 className=" font-bold text-5xl">Making Surveys shouldn't be this hard.</h2>
+      <section className="py-16 flex flex-col items-center gap-8 justify-center">
+        <h2 className="text-xl font-bold text-primary">Features</h2>
+        <h1 className=" font-bold text-5xl mb-10">Making Surveys shouldn't be this hard.</h1>
         <div className="flex w-full justify-between px-[6vw]">
           <div className="flex flex-col items-center gap-4 bg-red-200 p-4 rounded-box">
             <h2 className="text-2xl font-bold text-gray-800">Without SurveySpark</h2>
@@ -96,7 +99,9 @@ export default async function Home() {
                 <div className="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
                 </div>
-                <div className="timeline-start timeline-box">Interview</div>
+                <div className="timeline-start timeline-box">
+                  Gather responses
+                  </div>
                 <hr  className="bg-black"/>
               </li>
               <li>
@@ -128,7 +133,7 @@ export default async function Home() {
           <div className="divider divider-horizontal">OR</div>
 
           <div className="flex flex-col items-center gap-4 bg-green-200 p-4 rounded-box">
-            <h2 className="text-2xl font-bold text-gray-800">With SurveySpark!</h2>
+            <h2 className="text-2xl font-bold text-gray-800">With SurveySpark</h2>
             <ul className="timeline timeline-vertical max-w-[26rem]">
               <li>
                 <div className="timeline-start timeline-box">Have an idea</div>
@@ -139,7 +144,11 @@ export default async function Home() {
               </li>
               <li>
                 <hr className="bg-black"/>
-                <div className="timeline-end timeline-box">Gather responses!</div>
+                <div className="timeline-end timeline-box">
+                  Gather responses!
+                  <div className="absolute top-0 right-0"><Sparkles color="#a61fde" /></div>
+                  
+                  </div>
                 <div className="timeline-middle">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
                 </div>
