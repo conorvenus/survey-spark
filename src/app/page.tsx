@@ -47,12 +47,109 @@ export default async function Home() {
                 <span className="font-bold text-primary">50%</span> off all packages for the first 100 customers!
               </p>
             </div>
-            
-              <AvatarGroup />
-            
+
+            <AvatarGroup />
+
           </div>
         </div>
       </div>
+
+      <section className="py-16 flex flex-col items-center gap-12 justify-center">
+        <h2 className=" font-bold text-5xl">Making Surveys shouldn't be this hard.</h2>
+        <div className="flex w-full justify-between px-[6vw]">
+          <div className="flex flex-col items-center gap-4 bg-red-200 p-4 rounded-box">
+            <h2 className="text-2xl font-bold text-gray-800">Without SurveySpark</h2>
+            <ul className="timeline timeline-vertical max-w-[26rem]">
+              <li>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                </div>
+                <div className="timeline-start timeline-box">Have an idea</div>
+                <hr className="bg-black"/>
+              </li>
+              <li>
+                <hr  className="bg-black"/>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                </div>
+                <div className="timeline-end timeline-box">Search for issues</div>
+                <hr  className="bg-black"/>
+              </li>
+              <li>
+                <hr  className="bg-black"/>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                </div>
+                <div className="timeline-start timeline-box">Think of questions</div>
+                <hr  className="bg-black"/>
+              </li>
+              <li>
+                <hr  className="bg-black"/>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                </div>
+                <div className="timeline-end timeline-box">Write questions</div>
+                <hr  className="bg-black"/>
+              </li>
+              <li>
+                <hr  className="bg-black"/>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                </div>
+                <div className="timeline-start timeline-box">Interview</div>
+                <hr  className="bg-black"/>
+              </li>
+              <li>
+                <hr  className="bg-black"/>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                </div>
+                <div className="timeline-end timeline-box">Realise you missed something</div>
+                <hr  className="bg-black"/>
+              </li>
+              <li>
+                <hr  className="bg-black"/>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                </div>
+                <div className="timeline-start timeline-box">Interview again</div>
+                <hr  className="bg-black"/>
+              </li>
+              <li>
+                <hr  className="bg-black"/>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-down"><path d="M17 14V2"/><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z"/></svg>
+                </div>
+                <div className="timeline-end timeline-box">Repeat</div>
+              </li>
+            </ul>
+          </div>
+
+          <div className="divider divider-horizontal">OR</div>
+
+          <div className="flex flex-col items-center gap-4 bg-green-200 p-4 rounded-box">
+            <h2 className="text-2xl font-bold text-gray-800">With SurveySpark!</h2>
+            <ul className="timeline timeline-vertical max-w-[26rem]">
+              <li>
+                <div className="timeline-start timeline-box">Have an idea</div>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                </div>
+                <hr className="bg-black"/>
+              </li>
+              <li>
+                <hr className="bg-black"/>
+                <div className="timeline-end timeline-box">Gather responses!</div>
+                <div className="timeline-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                </div>
+                
+              </li>             
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section className="min-h-screen py-16 flex flex-col items-center gap-8 justify-center" id="pricing">
         <h1 className="text-primary font-bold text-lg">Pricing</h1>
         <h2 className="text-5xl font-bold text-center max-w-[800px]">Save hours and get responses coming in minutes!</h2>
