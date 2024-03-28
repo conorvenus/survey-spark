@@ -11,7 +11,7 @@ export default async function Home() {
   return (
 
     <main>
-      <div className="hero h-[80vh]">
+      <div className="hero h-screen pb-16">
         <div className="hero-content flex-col lg:flex-row-reverse gap-16 items-center justify-center">
           <div className="mockup-browser border border-base-300 flex-1">
             <div className="mockup-browser-toolbar">
@@ -20,7 +20,7 @@ export default async function Home() {
             <div className="flex justify-center px-4 py-32 border-t border-base-300">
             </div>
           </div>
-          <div className="flex flex-col gap-4 flex-1">
+          <div className="flex flex-col gap-6 flex-1">
             <h1 className="text-5xl font-bold">Let your ideas spark the perfect survey</h1>
             <p className="leading-6 text-lg">The AI powered survey generator with everything you need to get responses in minutes, <span className="relative text-secondary-content font-bold px-2 py-0.5">not hours.<span className="absolute bg-secondary rounded-md w-full h-full left-0 top-0 -z-10 -rotate-2"></span></span></p>
             <div className="flex flex-col my-4">
