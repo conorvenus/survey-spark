@@ -57,7 +57,7 @@ export default async function Home() {
       </div>
 
       <section className="py-16 flex flex-col items-center gap-8 justify-center">
-        <h2 className="text-xl font-bold text-primary">Features</h2>
+        <h2 className="text-xl font-bold text-primary">We understand the struggle</h2>
         <h1 className=" font-bold text-5xl mb-10">Making Surveys shouldn't be this hard.</h1>
         <div className="flex w-full justify-between px-[6vw]">
           <div className="flex flex-col items-center gap-4 bg-red-200 p-4 rounded-box">
@@ -146,7 +146,10 @@ export default async function Home() {
                 <hr className="bg-black"/>
                 <div className="timeline-end timeline-box">
                   Gather responses!
-                  <div className="absolute top-0 right-0"><Sparkles color="#a61fde" /></div>
+                  <div className="absolute -top-2 -right-2 text-2xl">
+                    {/* <Sparkles color="#a61fde" /> */}
+                    ✨
+                    </div>
                   
                   </div>
                 <div className="timeline-middle">

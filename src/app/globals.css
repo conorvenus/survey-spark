@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    overflow-y: scroll;
+  }
+
 .gradient-button {
     @apply border-none px-[2.6px] py-0.5 text-primary-content font-bold text-base gap-4;
     background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
