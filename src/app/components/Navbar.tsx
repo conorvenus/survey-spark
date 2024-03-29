@@ -48,15 +48,21 @@ export default async function Navbar() {
                 <div className="dropdown dropdown-end">
                   <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                      <img alt="Tailwind CSS Navbar component" src={session.user.image ?? ""} />
+                      <img alt="Icon" src={session.user.image ?? ""} />
                     </div>
                   </div>
-                  <ul tabIndex={0} className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <ul tabIndex={0} className="menu menu-sm dropdown-content z-[1] p-2 gap-3 shadow bg-base-100 rounded-box w-52">
                     <li>
                       <p className="flex gap-1 items-center text-lg text-primary font-bold md:hidden">
                         <Banknote />
                         {user?.credits} Credits
                       </p>
+                    </li>
+                    <li >
+                      <Link href={"/#pricing"} className="btn bg-white">
+                        <Banknote />
+                        Credits
+                      </Link>
                     </li>
                     <li>
                       <Link href={"/api/auth/signout"} className="btn btn-primary">

@@ -63,8 +63,6 @@ export default function Surveys() {
                     </div>
                 </dialog>
             </div>
-
-
         </section>
     )
 }
