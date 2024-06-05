@@ -30,9 +30,6 @@ export default function Surveys() {
                     <GenerateButton />
                     <button className="btn join-item" onClick={()=>document.getElementById('settings').showModal()}><Settings2 color="#374151" /></button>
                 </div>
-                <div className="absolute -top-8 -right-8 -rotate-45">
-                    <Loader size={100} color="#058ed9" />
-                </div>
                 <dialog id="settings" className="modal">
                     <div className="modal-box">
                         <p className="text-lg font-bold text-center mb-8">Number of Questions</p>

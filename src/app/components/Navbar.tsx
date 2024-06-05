@@ -41,7 +41,7 @@ export default async function Navbar() {
           <div className="navbar-end gap-2 md:gap-4">
             {session?.user ? 
               <>
-                <p className="gap-1 items-center text-lg text-primary font-bold md:flex hidden">
+                <p className="gap-1 items-center text-lg text-primary font-bold md:flex hidden pt-[4px]">
                   <Banknote />
                   {user?.credits} Credits
                 </p>
